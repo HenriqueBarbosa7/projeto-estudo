@@ -5,28 +5,19 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.logo-hm {
-    width: 568px;
-    height: 600px;
-
+.wrapper {
+    padding: 3rem;
+    height: 100vh
 }
 
-.section-right {
-    display: inline-block;
-    height: 100vh;
-    position: absolute;
-    top: 30%;
-    right: 2%;
-    margin-right: 105px;
-}
-
-.section-left {
-    display: inline-block;
-    height: 100vh;
-}
-
-.link-header {
-    margin-right: 23px;
+header {
+    font-size: 1.5rem;
+    gap: 1.5rem;
+    display: flex;
+    font-weight: 600;
+    color: #989D9C;
+    align-items: center;
+    cursor: pointer;
 }
 
 .link-header:hover {
@@ -38,136 +29,109 @@
 }
 
 .button-header {
-    width: 130px;
-    height: 41px;
+    padding: 8px 20px;
     border-radius: 50px;
-    border: none;
-    background: #323232;
-    font-size: 20px;
+    border: 2px solid transparent;
+    background: #000;
+    font-size: 1.25rem;
     font-weight: 600;
-    line-height: 18px;
     color: #FFFF;
-}
-
-
-header {
-    margin: 34px 0 5px 56px;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 29px;
-    color: #989D9C;
     cursor: pointer;
 }
 
+.button-contact {
+    border-radius: 50px;
+    border: none;
+    background: #000;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #FFFF;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.container-main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-hm {
+    width: 50%;
+}
+
+.info {
+    text-align: center;
+}
+
 h1 {
-    width: 400px;
-    font-size: 90px;
+    width: 100%;
+    font-size: 5.625rem;
     font-weight: 900;
-    line-height: 100px;
     color: #323232;
+    line-height: 90px;
 }
 
 h2 {
-    width: 250px;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 25px;
     color: #515151;
+    margin-bottom: 1rem;
 }
 
 p {
-    width: 515px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
-    line-height: 29px;
-    margin-top: 15px;
+    margin-bottom: 1rem;
     color: #515151;
 }
 
-.button-contact {
-    width: 219px;
-    height: 64px;
-    border-radius: 50px;
-    border: none;
-    background: #323232;
-    box-shadow: 0px 4px 4px 0px #00000040;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 34px;
-    color: #FFFF;
-    margin-top: 21px;
-    text-decoration: none;
+.button-contact:hover, .button-header:hover {
+    opacity: .4;
 }
 
-@media screen and (max-width:780px) {
+.button-contact:active, .button-header:active {
+    opacity: .2;
+}
 
+@media screen and (max-width:768px) {
     header {
         display: none;
+    }
+
+    .container-main {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .hm-logo {
+        height: 100%
+    }
+
+    .button-contact:hover {
+        opacity: .4;
+    }
+
+    .button-contact:active {
+        opacity: .2;
     }
 
     p {
         display: none;
     }
 
-    .logo-hm {
-        width: 120px;
-        height: 120px;
-        position: sticky;
-        margin-top: 92px;
-        margin-left: 96px;
-    }
+}
 
-    .section-left {
-        display: block;
-        width: 100%;
-        height: 30vh;
-        margin-left: 25px;
-        margin-bottom: 55px;
-    }
-
-    .section-right {
-        display: block;
-        width: 100%;
-        height: 70vh;
-        position: relative;
-        margin-left: 68px;
-    }
-
+@media screen and (max-width:390px) {
     h1 {
-        width: 263px;
-        height: 52px;
-        font-size: 50px;
-        font-weight: 900;
-        line-height: 61px;
-        text-align: center;
+        font-size: 3rem;
+        line-height: inherit;
     }
 
     h2 {
-        font-size: 30px;
-        font-weight: 500;
-        line-height: 37px;
-        text-align: center;
-        margin-top: 68px;
-
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
     }
-
-    .button-contact {
-        margin-top: 70px;
-        display: block;
-        margin-left: 25px;
-        text-decoration: none;
-    }
-
-    .button-contact:hover {
-        opacity: .4;
-    }
-   
-    .button-contact:active {
-        opacity: .2;
-    }
-
-
-
-
-
 }
